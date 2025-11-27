@@ -1,0 +1,67 @@
+.app-shell {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 40px 30px;
+  background: white;
+  border: 1px solid #bdc3c7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.header-content p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.total-info {
+  font-size: 0.95rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.total-count {
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  width: 100%;
+  place-items: start;
+}
+
+.card {
+  background: white;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  padding: 25px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}

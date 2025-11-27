@@ -1,0 +1,21 @@
+<div class="app-shell">
+	<div class="app-header">
+		<section class="header-content">
+			<h1 class="h1">Password Security APP</h1>
+			<p class="muted">User Managment</p>
+		</section>
+		<span class="total-info">Total registered: <strong class="total-count">{{ (userService.getUsersSnapshot().length) }}</strong></span>
+	</div>
+
+	<article class="grid">
+		<section class="card">
+			<app-register></app-register>
+		</section>
+
+		<section class="card">
+			<app-user-list></app-user-list>
+		</section>
+	</article>
+</div>
+
+

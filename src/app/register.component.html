@@ -1,0 +1,45 @@
+<section class="form-container">
+  <h2>Sign Up</h2>
+  <form (ngSubmit)="go()" class="signup-form">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="u"
+        name="u1"
+        class="form-input"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="w"
+        name="w1"
+        placeholder="Secure password"
+        class="form-input"
+      />
+    </div>
+
+    <div class="pw-row" *ngIf="w">
+      <span class="strength-label">Strength</span>
+      <div class="strength">
+        <span class="bar" [ngClass]="st()"></span>
+      </div>
+      <span class="strength-text">{{ st() }}</span>
+    </div>
+
+    <button class="submit-btn" type="submit" [disabled]="en">Sign Up</button>
+  </form>
+
+  <p *ngIf="err" class="error">
+    {{ err }}
+  </p>
+
+  <p *ngIf="ok" class="success">
+    {{ ok }}
+  </p>
+</section>

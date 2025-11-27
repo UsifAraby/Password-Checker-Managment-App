@@ -1,0 +1,24 @@
+<section class="users-container">
+  <div class="users-header">
+    <h2>Registered Users</h2>
+    <span class="user-count">{{ lst.length }} total</span>
+  </div>
+
+  <ul class="users-list">
+    <li *ngIf="!lst.length" class="empty-state">No registered users yet.</li>
+
+    <li *ngFor="let item of lst; trackBy: _track" class="user-entry">
+      <div class="user-row">
+        <article class="user-info">
+          <span class="username" [ngClass]="{ weak: item.password.length < 5 }">{{ item.username }}</span>
+          <p class="pwd-meta">Password length: <strong>{{ item.password.length }}</strong></p>
+        </article>
+
+        <aside class="user-actions">
+          <span class="pw-badge" [ngClass]="{ weak: item.password.length < 5 }">{{ item.password.length }}</span>
+          <button class="delete-btn" title="Delete" (click)="ask(item.username)">🗑️</button>
+        </aside>
+      </div>
+    </li>
+  </ul>
+</section>
